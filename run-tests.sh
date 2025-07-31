@@ -18,13 +18,13 @@ echo "Running git-autosync tests..."
 echo "Running additional validation..."
 
 # Test that script exists and is executable
-if [ ! -f "git-autosync" ]; then
-    echo "ERROR: git-autosync script not found"
+if [ ! -f "git-autosync.sh" ]; then
+    echo "ERROR: git-autosync.sh script not found"
     exit 1
 fi
 
-if [ ! -x "git-autosync" ]; then
-    echo "ERROR: git-autosync script is not executable"
+if [ ! -x "git-autosync.sh" ]; then
+    echo "ERROR: git-autosync.sh script is not executable"
     exit 1
 fi
 
