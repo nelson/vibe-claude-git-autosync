@@ -21,14 +21,14 @@ jobs:
 
     - name: Make scripts executable
       run: |
-        chmod +x git-autosync
+        chmod +x git-autosync.sh
         chmod +x test-git-autosync.sh
 
     - name: Run tests
-      run: ./test-git-autosync.sh ./git-autosync
+      run: ./test-git-autosync.sh ./git-autosync.sh
 
     - name: Test script directly (basic validation)
       run: |
         # Test that the script fails gracefully when not in a git repo
-        ! ./git-autosync 2>/dev/null || exit 1
+        ! ./git-autosync.sh 2>/dev/null || exit 1
         echo "Script correctly fails when not in git repo"
